@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Chadder | Login or Register</title>
+	<style> 
+	body {
+		background-color: #ef3e2b;
+		text-align: center;
+	}
+		
+	.box {
+		border-radius: 1em;
+		width: 75%;
+	}
+	
+	img {
+		padding-top: 10%;
+		padding-bottom: 5%;
+		width: 45%;
+		height: 30%;
+	}
+	
+	h3 {
+		color: white; 
+		font-size: 1em;
+		font-family: Verdana;
+		text-shadow: #666666 0.05em 0.05em;
+	}
+	
+	input {
+		font-family: Verdana;
+		border-color: #ef3e2b;
+		border-radius: 7px 7px 7px 7px;
+	}
+		
+	label {
+		color: white; 
+		font-size: 16px;
+		height: 25px;
+		font-family: Verdana;
+		text-shadow: #666666 1px 1px;
+	}
+	
+	#textfields input {
+		text-align: center;
+		width: 45%;
+		height: 25px;
+	}
+	
+	#email {
+		display: none;
+	}
+	
+	#register2 {
+		display: none;
+	}
+	</style>
+	<script type="text/JavaScript">
+		function ShowEmail () {
+			var e = document.getElementById("email");
+			var b = document.getElementById("register1");
+			var c = document.getElementById("register2");
+			if (e.style.display=="none" ) {
+				e.style.display="inline";
+				b.style.display="none";
+				c.style.display="inline";
+			}
+			else {
+				e.style.display="none";
+			}
+		}
+	</script>
+	</head>
+	<body>
+		<img src="chadder_white.png" alt="Chadder">
+		<h3>Log in or sign up, it's free!</h3>
+		<form id="box" action="something.php" method="post">
+			<div id="textfields">
+				<input type="text" name="Username" placeholder="Username" />
+				<br/><br/>
+				<div id="email">
+					<input type="text" name="Email" placeholder="Email" />
+					<br/><br/>
+				</div>
+				<input type="password" name="Password" placeholder="Password" />
+				<br/><br/>
+			</div>
+			<label><input type="checkbox" value="checked"/><b>Remember Me</b></label>
+		<br/><br/>
+		</form>
+		<input type="button" id="register1" name="Register" onClick="ShowEmail();" value="Register!" />
+		<input type="button" id="register2" name="Register2" value="Register!" />
+		<input type="button" name="Login" value="Log In!" />
+	</body>
+</html>
